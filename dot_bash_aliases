@@ -1,0 +1,140 @@
+#             ██ ██
+#            ░██░░
+#   ██████   ░██ ██  ██████    ██████  █████   ██████
+#  ░░░░░░██  ░██░██ ░░░░░░██  ██░░░░  ██░░░██ ██░░░░
+#   ███████  ░██░██  ███████ ░░█████ ░███████░░█████
+#  ██░░░░██  ░██░██ ██░░░░██  ░░░░░██░██░░░░  ░░░░░██
+# ░░████████ ███░██░░████████ ██████ ░░██████ ██████
+#  ░░░░░░░░ ░░░ ░░  ░░░░░░░░ ░░░░░░   ░░░░░░ ░░░░░░
+#
+
+# to use this awesome tool: https://hub.github.com/
+alias git=hub
+
+## Managing Terraform
+# To plan and write out the plan to a file:
+alias tfp='terraform plan -out=current.plan'
+
+# To apply the plan that was previously written to the file:
+alias tfa='terraform apply  -input=true current.plan'
+
+## Ones I want to remember to use!
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+## Helpful gitfu
+## This doesn't work for whatever reason.
+## Errors on new terminal window with "Not a git repository"
+#alias gbranches="for b in \`git branch -r | grep -v -- '->'`; do git branch --track ${b##origin/} $b; done;"
+
+# use syntax highlighting cat instead of regular cat
+alias cat=ccat
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias zshconfig="$EDITOR ~/.zshrc"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias ssource='source ~/.zshrc'
+alias hosts="sudo $EDITOR /etc/hosts"
+
+# Common typos
+alias "cd.."="cd .."
+alias exot=exit
+
+
+# Shortcuts
+alias lss="ls -Gal"
+alias lp="ls -p"
+alias h="history"
+alias c="cd"
+alias g="git"
+alias gs="git status"
+alias gcm="git commit -m"
+alias e="$EDITOR ."
+alias ql="qlmanage -p"
+alias caff="caffeinate -dis"
+alias lc="lolcat"
+alias tailf="less +F $0"
+alias sha256="shasum -a 256 "$1" "
+
+
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+
+# http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume 10'"
+alias bell='echo "\a"'
+
+
+alias unhidelibrary="chflags nohidden ~/Library"
+alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'";
+
+alias vup="vagrant up && vagrant provision && vagrant ssh"
+alias vp="vagrant provision"
+alias vs='sites && vagrant ssh'
+alias vag="vagrant"
+
+
+
+alias ll1="tree --dirsfirst -ChFL 1"
+alias ll2="tree --dirsfirst -ChFL 2"
+alias ll3="tree --dirsfirst -ChFL 3"
+alias ll4="tree --dirsfirst -ChFupDaL 1"
+alias ll5="tree --dirsfirst -ChFupDaL 2"
+alias ll6="tree --dirsfirst -ChFupDaL 3"
+
+alias gist="gist -ec $1"
+
+alias stest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Intuitive map function
+# For example, to list all directories that contain a certain file:
+# find . -name .gitattributes | map dirname
+alias map="xargs -n1"
+
+# Docker configuration
+alias dockermachine-start='eval "$(docker-machine env default)"'
+alias dockerrm="docker rm $(docker ps -a -q)"
+alias dockerrmi="echo docker rmi $(docker images -a | grep "^<none>" | awk "{print $3}")"
+
+# Shortcuts
+alias dot="cd ~/Develop/dotfiles"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias work="cd $WORK"
+alias play="cd $DEV"
