@@ -19,8 +19,28 @@ To get started on another system, run:
 chezmoi init https://github.com/mbbroberg/dotfiles --apply
 ```
 
+To do: make these alaises in fish: 
+
 - To generate `gnome-backup` run `dconf dump / > gnome-backup`
 - To reload, `dconf load / < gnome-backup`
-- To generate `Brewfile` run `brew bundle dump` 
-- To reload, `brew bundle --file=` 
+- To generate `Brewfile` run `brew bundle dump --file=~/.Brewfile` 
+- To reload, `brew bundle --file=~/.Brewfile` 
 - Autokey config goes to `~/.config/autokey/`
+- Setup for guake 
+
+```bash
+backup_guake () {
+    dconf dump /apps/guake/ > /home/mbbroberg/.local/share/chezmoi/dumps/guake-backup
+}
+
+restore_guake () {
+    dconf reset -f /apps/guake/
+    dconf load /apps/guake/ < /home/mbbroberg/.local/share/chezmoi/dumps/guake-backup
+}
+```
+
+Next time I use a Mac: 
+
+- Alfred goes ? (Look it back up)
+- Set iterm to look for config here (how? L)
+- Load the iterm colors by (?)
