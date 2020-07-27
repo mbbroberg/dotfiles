@@ -1,5 +1,5 @@
 README.md
 LICENSE
 settings.json
-dumps/*
-bin/*
+dumps/**
+bin/**
