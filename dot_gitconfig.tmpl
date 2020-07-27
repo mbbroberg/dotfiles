@@ -213,11 +213,11 @@
   helper = osxkeychain
 {{ end -}}
   username = mbbroberg
-  helper = cache --timeout=3600
+  helper = cache --timeout=10800
 
 [credential "https://gitlab.com"]
 {{ if eq .chezmoi.os "darwin" -}}
   helper = osxkeychain
 {{ end -}}
   username = mbb
-  helper = cache --timeout=3600
+  helper = cache --timeout=10800
