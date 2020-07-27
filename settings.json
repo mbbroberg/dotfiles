@@ -1,0 +1,17 @@
+{
+    "workbench.statusBar.visible": false,
+    "window.zoomLevel": 2,
+    "editor.fontSize": 13,
+    "breadcrumbs.enabled": true,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "terminal.integrated.macOptionClickForcesSelection": true,
+    "workbench.colorTheme": "Solarized Light",
+    "python.formatting.provider": "black",
+    "python.testing.pytestEnabled": true,
+    "explorer.confirmDragAndDrop": false,
+    "python.showStartPage": false
+}
