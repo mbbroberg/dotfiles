@@ -6,6 +6,9 @@ if not functions -q fisher
     fish -c fisher
 end
 
+# Workaround for .profile entry to kickstart Homebrew
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # A prettier prompt
 starship init fish | source
 
