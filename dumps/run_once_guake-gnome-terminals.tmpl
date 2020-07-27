@@ -1,0 +1,17 @@
+{{ if eq .chezmoi.os "linux" -}}
+if test -f ~/.guake-config
+    # Assume we don't want to stomp on existing configuration
+    dconf load /apps/guake/ < ~/.guake-config
+else
+    # Backup the config
+    dconf dump /apps/guake/ > ~/.guake-config
+end
+
+if test -f ~/.gnome-terminal-config
+    # Assume we don't want to stomp on existing configuration
+    dconf load / < ~/.gnome-terminal-config
+else
+    # Backup the config
+    dconf dump / > ~/.gnome-terminal-config
+end
+{{ end -}}
