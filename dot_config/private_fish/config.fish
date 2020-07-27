@@ -1,11 +1,3 @@
-# Automate installation of Fisher files
-# https://github.com/jorgebucaran/fisher#bootstrap-installation
-if not functions -q fisher
-    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-    fish -c fisher
-end
-
 # Workaround for .profile entry to kickstart Homebrew
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
