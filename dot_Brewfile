@@ -1,7 +1,10 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/core"
+{{ if eq .chezmoi.os "linux" -}}
 tap "linuxbrew/xorg"
+{{ else if eq .chezmoi.os "darwin" -}}
+tap "homebrew/cask"
+{{ end -}}
 # tools I like
 brew "ack"
 brew "readline"
