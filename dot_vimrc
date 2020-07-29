@@ -30,7 +30,7 @@ let g:syntastic_always_populate_loc_list = 1
 " ==============================
 "
 syntax enable
-set background=dark
+set background=light
 syntax on " Enable syntax highlighting
 "
 " ==============================
@@ -57,11 +57,6 @@ endif
 "	Airline Settings
 " ==============================
 "
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#hunks#enabled=0
-let g:airline_section_x='%{fugitive#statusline()}'
-let g:airline_section_y=''
-let g:airline_theme='dark'
 let g:Powerline_symbols = 'fancy'
 
 "
