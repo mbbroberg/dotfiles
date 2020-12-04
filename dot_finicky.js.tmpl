@@ -3,12 +3,16 @@ module.exports = {
   defaultBrowser: "Firefox",
   handlers: [
    {
-     match: finicky.matchHostnames(["trello.com", "ift.tt"]),
-     browser: "Google Chrome"
+     match: finicky.matchHostnames(["trello.com", "linkedin.com", "ift.tt"]),
+     browser: "Brave Browser"
    },
    {
-     match: /redhat/,
-     browser: "Google Chrome"
+     match: /google/,
+     browser: "Brave Browser"
+   }, 
+   {
+     match: /adobe/,
+     browser: "Google Chrome"  
    }
   ]
 };
