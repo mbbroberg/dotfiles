@@ -1,18 +1,22 @@
 {{ if eq .chezmoi.os "darwin" -}}
 module.exports = {
-  defaultBrowser: "Firefox",
+  defaultBrowser: "Firefox Developer Edition",
   handlers: [
    {
      match: finicky.matchHostnames(["trello.com", "linkedin.com", "ift.tt"]),
-     browser: "Brave Browser"
+     browser: "Microsoft Edge"
+   },
+   {
+     match: /acquia-sites/,
+     browser: "Microsoft Edge"
    },
    {
      match: /google/,
-     browser: "Brave Browser"
-   }, 
+     browser: "Microsoft Edge"
+   },
    {
      match: /adobe/,
-     browser: "Google Chrome"  
+     browser: "Microsoft Edge"
    }
   ]
 };
