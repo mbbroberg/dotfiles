@@ -1,6 +1,7 @@
 {{ if eq .chezmoi.os "linux" -}}
 #!/home/linuxbrew/.linuxbrew/bin/fish
-{{ else if eq .chezmoi.os "darwin" -}}
+{{ else -}}
 #!/usr/local/bin/fish
 {{ end -}}
-brew bundle --file=~/.Brewfile 
+
+.local/share/Cockatrice/Cockatrice/settings/shortcuts.ini
