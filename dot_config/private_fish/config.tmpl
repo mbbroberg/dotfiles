@@ -1,5 +1,5 @@
-# Workaround for .profile entry to kickstart Homebrew
 {{ if eq .chezmoi.os "linux" -}}
+# Workaround for .profile entry to kickstart Homebrew
 eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 # {{ else if eq .chezmoi.os "darwin" -}}
 {{ end -}}
