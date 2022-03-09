@@ -13,11 +13,11 @@
   github = mbbroberg
 
 [core]
-  editor = nvim
+  editor = vim
   # Specifies the pathname to the file that contains patterns to describe 
   # paths that are not meant to be tracked, in addition to .gitignore
   # https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreexcludesFile
-  excludesfile = /home/mbbroberg/Development/dotfiles/git/.global_ignore
+  # excludesfile = /home/mbbroberg/Development/dotfiles/git/.global_ignore
 
   # Enable parallel I/O for operations like "git diff".
   preloadindex = true
@@ -221,3 +221,7 @@
 {{ end -}}
   username = mbb
   helper = cache --timeout=10800
+
+[init]
+
+defaultBranch = main
