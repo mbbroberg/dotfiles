@@ -11,13 +11,20 @@ Dotfiles are the collection of managed customizations across systems. Read more:
 
 ## How-to guide (to my future self)
 
-Unless you are me, you probably don't want to follow these directions verbatim. Make a fork of this project and customize it to be your own. If you are me, here's how to use this, dear future self.
+`chezmoi` does the heavy lifting, but the quick guide is: 
+
+- `chezmoi add` when you change an item manually and want to pull it in
+- `chezmoi apply` when you want to set it back to the declarative state
+
+Unless you are me, you probably don't want to follow this setup verbatim. Make a fork of this project and customize it to be your own. If you are me, here's how to use this, dear future self.
 
 To get started on another system, run: 
 
 ```bash
-chezmoi init https://github.com/mbbroberg/dotfiles --apply
+chezmoi init $REPO --apply
 ```
+
+Where `$REPO` is your repository URL. 
 
 Next time I use a Mac: 
 
