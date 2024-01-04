@@ -11,23 +11,28 @@ Dotfiles are the collection of managed customizations across systems. Read more:
 
 ## How-to guide (to my future self)
 
-`chezmoi` does the heavy lifting, but the quick guide is: 
+`chezmoi` does the heavy lifting, but the quick guide looks like this.
 
-- `chezmoi add` when you change an item manually and want to pull it in
-- `chezmoi apply` when you want to set it back to the declarative state
+### On a new system, run: 
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+```
+
+### Day to day, run: 
+
+- `chezmoi diff` to see what's changed
+- `chezmoi update` will reset with the upstream version
+- `chezmoi apply` when you want to set whatever's local to be global (will prompt when overwriting)
+- `chezmoi add` when I accidentally write outside of chezmoi
+- `chezmoi merge` to resolve differences
+
+[Read up on usage here.](https://www.chezmoi.io/user-guide/frequently-asked-questions/usage/)
 
 Unless you are me, you probably don't want to follow this setup verbatim. Make a fork of this project and customize it to be your own. If you are me, here's how to use this, dear future self.
 
-To get started on another system, run: 
 
-```bash
-chezmoi init $REPO --apply
-```
+### TODOs
 
-Where `$REPO` is your repository URL. 
-
-Next time I use a Mac: 
-
-- Alfred goes ? (Look it back up)
-- Set iterm to look for config here (how? L)
-- Load the iterm colors by (?)
+- [] Alfred config
+- [] iTerm shortcuts
