@@ -31,8 +31,10 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 
 Unless you are me, you probably don't want to follow this setup verbatim. Make a fork of this project and customize it to be your own. If you are me, here's how to use this, dear future self.
 
+### Recent 
+
+- Add hardlinks to key Obsidian config files so I can sync them across systems
 
 ### TODOs
 
-- [] Alfred config
-- [] iTerm shortcuts
+- Correct iTerm and add shortcuts
