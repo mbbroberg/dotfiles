@@ -4,5 +4,6 @@
   "dataview",
   "janitor",
   "templater-obsidian",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "card-board"
 ]
