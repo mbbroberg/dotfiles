@@ -1,9 +1,22 @@
 [
-  "update-time-on-edit",
-  "cmdr",
-  "dataview",
-  "janitor",
+  "nldates-obsidian",
+  "calendar",
+  "supercharged-links-obsidian",
+  "obsidian-style-settings",
+  "periodic-notes",
   "templater-obsidian",
+  "obsidian-statusbar-pomo",
+  "obsidian-task-progress-bar",
+  "simple-time-tracker",
+  "last-modified-timestamp-in-status-bar",
+  "obsidian-timestamp-notes",
+  "obsidian-focus-mode",
+  "janitor",
+  "obsidian42-brat",
+  "obsidian-query-control",
+  "dataview",
+  "obsidian-day-planner",
   "obsidian-tasks-plugin",
-  "card-board"
+  "card-board",
+  "obsidian-projects"
 ]
