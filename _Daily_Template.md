@@ -1,7 +1,8 @@
 <% tp.web.daily_quote() %>
 ----
+##### Today is _<% tp.date.now("dddd, MMMM Do YYYY", 0, tp.file.title) %>_
 
-<< <%* if (tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD ddd") == "Mon") { %>[Last Friday](<% tp.date.now("YYYY-MM-DD", -3, tp.file.title, "YYYY-MM-DD") %>) <%* } else { %>[Yesterday](<% tp.date.now("YYYY-MM-DD", -1, tp.file.title, "YYYY-MM-DD") %>) <%* } %> / <%* if (tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD ddd") == "Fri") { %>[Next Monday](<% tp.date.now("YYYY-MM-DD", 3, tp.file.title, "YYYY-MM-DD") %>) <%* } else { %>[Tomorrow](<% tp.date.now("YYYY-MM-DD", 1, tp.file.title, "YYYY-MM-DD") %>) <%* } %> >>
+<< <%* if (tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD ddd") == "Mon") { %>[Last Friday](<% tp.date.now("YYYY-MM-DD ddd", -3, tp.file.title, "YYYY-MM-DD ddd") %>) <%* } else { %>[Yesterday](<% tp.date.now("YYYY-MM-DD ddd", -1, tp.file.title, "YYYY-MM-DD ddd") %>) <%* } %> / <%* if (tp.date.now("ddd", 0, tp.file.title, "YYYY-MM-DD ddd") == "Fri") { %>[Next Monday](<% tp.date.now("YYYY-MM-DD ddd", 3, tp.file.title, "YYYY-MM-DD ddd") %>) <%* } else { %>[Tomorrow](<% tp.date.now("YYYY-MM-DD ddd", 1, tp.file.title, "YYYY-MM-DD ddd") %>) <%* } %> >>
 ## Big Picture
 ![[2023-Q4#Quarterly Focal Points]]
 
