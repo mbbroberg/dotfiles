@@ -22,9 +22,9 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
 ### Day to day, run: 
 
 - `chezmoi diff` to see what's changed
-- `chezmoi update` will reset with the upstream version
-- `chezmoi apply` when you want to set whatever's local to be global (will prompt when overwriting)
-- `chezmoi add` when I accidentally write outside of chezmoi
+- `chezmoi update` will reset `local` with the `upstream` version
+- `chezmoi apply` when you want to reset `upstream` with `local` version (will prompt when overwriting)
+- `chezmoi add` when you edit outside of chezmoi files
 - `chezmoi merge` to resolve differences
 
 [Read up on usage here.](https://www.chezmoi.io/user-guide/frequently-asked-questions/usage/)
