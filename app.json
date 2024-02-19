@@ -1,0 +1,11 @@
+{
+  "promptDelete": false,
+  "showFrontmatter": true,
+  "alwaysUpdateLinks": true,
+  "trashOption": "system",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "Resources/Images",
+  "defaultViewMode": "source",
+  "showInlineTitle": false,
+  "propertiesInDocument": "source"
+}

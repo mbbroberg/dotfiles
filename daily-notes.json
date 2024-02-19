@@ -1,0 +1,6 @@
+{
+  "folder": "Areas/Daily-Weekly",
+  "template": "Areas/Daily-Weekly/_Dailies-Template",
+  "autorun": true,
+  "format": "YYYY-MM-DD ddd"
+}
