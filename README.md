@@ -37,4 +37,6 @@ Unless you are me, you probably don't want to follow this setup verbatim. Make a
 
 ### TODOs
 
-- Correct iTerm and add shortcuts
+- [x] Correct iTerm and add shortcuts
+- [ ] Learn how to run `onchange` scripts properly 
+  - [This documentation](https://www.chezmoi.io/user-guide/use-scripts-to-perform-actions/#run-a-script-when-the-contents-of-another-file-changes) shows that I can run on change to a checksum and definitely want that pattern, but I don't get the syntax shown.
