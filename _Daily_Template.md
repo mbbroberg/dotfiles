@@ -14,9 +14,17 @@
 - Prep for meetings (or cancel them if they're not a priority)
 
 ## Today's Plan
-#### New 
-- 
-#### Existing 
+### New 
+- [ ] Add Product presentation to ATM deck (based on Mike DMs)📅 2024-03-04 ⏫ 
+
+### Existing 
+```tasks
+path does not include {{query.file.path}}
+due today
+sort by function task.file.path
+limit 5
+```
+#### Backlog
 ```tasks 
 not done
 sort by due date
