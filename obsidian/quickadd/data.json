@@ -1,0 +1,333 @@
+{
+  "choices": [
+    {
+      "id": "98d11414-b4de-4023-adde-b24da79213bc",
+      "name": "Write",
+      "type": "Multi",
+      "command": true,
+      "choices": [
+        {
+          "id": "4ac0bfb2-7778-412f-94c0-1645dcba45fa",
+          "name": "📓 Moment",
+          "type": "Template",
+          "command": false,
+          "templatePath": "03 Resources/Templates/+New Moment.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:gggg MMM}} - {{Value}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Moments"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": true
+        },
+        {
+          "id": "defdd656-28b2-4c6e-bb62-0f2368bbc7a1",
+          "name": "🐞 Ada Log",
+          "type": "Template",
+          "command": true,
+          "templatePath": "03 Resources/Templates/+Ada Log.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{DATE:gggg MMM}} - {{Value}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "Moments"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Append to the bottom of the file",
+          "setFileExistsBehavior": true
+        },
+        {
+          "id": "01f51b85-2b7a-484a-a3ce-08adbdd73b94",
+          "name": "✅ New Task",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "00 TODO.md",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": true,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": false,
+            "format": ""
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "Inbox",
+            "insertAtEnd": true,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "prepend": false,
+          "task": true,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "07bb1bda-07f1-448b-8d4e-f28e18783b21",
+          "name": "🗒️ Quick Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "03 Resources/Templates/+New Note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "03 Resources/Notes"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": true
+        },
+        {
+          "id": "718eaa03-3751-4048-953a-8047ba35cb02",
+          "name": "🏡 HOME",
+          "type": "Template",
+          "command": true,
+          "templatePath": "03 Resources/Templates/+New Note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "00 HOME"
+          },
+          "folder": {
+            "enabled": false,
+            "folders": [],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": false
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Nothing",
+          "setFileExistsBehavior": true
+        }
+      ],
+      "collapsed": false
+    },
+    {
+      "id": "8c98fceb-065c-4ef6-84b2-2d35a55b6056",
+      "name": "<Broken> Ada Logging",
+      "type": "Macro",
+      "command": false,
+      "macroId": "bb0f3297-5e5f-4e31-8957-7f2133f8ced1"
+    }
+  ],
+  "macros": [
+    {
+      "name": "Quick Notes",
+      "id": "3b2f6e70-7ffd-4d41-aa6f-168e8e93486b",
+      "commands": [
+        {
+          "name": "QuickAdd: Write",
+          "type": "Obsidian",
+          "id": "5daa7a39-8ea5-4dd4-af3b-9a1bf88c4886",
+          "commandId": "quickadd:choice:98d11414-b4de-4023-adde-b24da79213bc"
+        }
+      ],
+      "runOnStartup": true
+    },
+    {
+      "name": "Ada Logging",
+      "id": "bb0f3297-5e5f-4e31-8957-7f2133f8ced1",
+      "commands": [
+        {
+          "name": "Create File",
+          "type": "NestedChoice",
+          "id": "df0e48a0-5075-4382-97ae-71d475e08370",
+          "choice": {
+            "id": "3b9785fe-edb1-4eba-93cf-32c044c2a6fe",
+            "name": "Create File",
+            "type": "Template",
+            "command": false,
+            "templatePath": "03 Resources/Templates/+Ada Log.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{DATE:gggg MMM}} - {{Value:The Moment}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "Moments"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": true,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": true
+          }
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "33b9ba14-ead2-4642-84a6-2c53559de22e",
+          "time": 100
+        },
+        {
+          "name": "Start Note",
+          "type": "NestedChoice",
+          "id": "21c3d577-2590-4035-9af3-0da82d125482",
+          "choice": {
+            "id": "49fd7c7a-d9e5-4452-a847-61299def73e0",
+            "name": "Start Note",
+            "type": "Capture",
+            "command": false,
+            "appendLink": false,
+            "captureTo": "",
+            "captureToActiveFile": true,
+            "createFileIfItDoesntExist": {
+              "enabled": false,
+              "createWithTemplate": false,
+              "template": ""
+            },
+            "format": {
+              "enabled": true,
+              "format": "It's {{DATE:ddd MMM D hh:mm}} and I'm feeling Type:{{VALUE:Celebration,Disappointment}}(specifically Mood:{{VALUE:In Awe,Proud,Excited,Calm,Joyful,Focused,Exhausted,Depleted,Easily Upset,Sad,Anxious}}. Here's the story I'm telling myself: \n\n"
+            },
+            "insertAfter": {
+              "enabled": false,
+              "after": "",
+              "insertAtEnd": false,
+              "considerSubsections": false,
+              "createIfNotFound": false,
+              "createIfNotFoundLocation": "top"
+            },
+            "prepend": true,
+            "task": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "single-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": true,
+  "version": "1.8.1",
+  "disableOnlineFeatures": true,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

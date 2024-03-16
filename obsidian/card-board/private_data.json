@@ -1,0 +1,108 @@
+{
+  "version": "0.13.0",
+  "data": {
+    "boardConfigs": [
+      {
+        "columns": [
+          {
+            "tag": "undated",
+            "data": {
+              "collapsed": true,
+              "name": "Undated"
+            }
+          },
+          {
+            "tag": "dated",
+            "data": {
+              "collapsed": false,
+              "name": "Today",
+              "range": {
+                "tag": "before",
+                "data": 1
+              }
+            }
+          },
+          {
+            "tag": "dated",
+            "data": {
+              "collapsed": false,
+              "name": "Soon",
+              "range": {
+                "tag": "between",
+                "data": {
+                  "from": 1,
+                  "to": 5
+                }
+              }
+            }
+          },
+          {
+            "tag": "dated",
+            "data": {
+              "collapsed": true,
+              "name": "Future",
+              "range": {
+                "tag": "after",
+                "data": 5
+              }
+            }
+          },
+          {
+            "tag": "completed",
+            "data": {
+              "collapsed": false,
+              "index": 4,
+              "limit": 10,
+              "name": "Completed"
+            }
+          }
+        ],
+        "filters": [
+          {
+            "tag": "fileFilter",
+            "data": "00 TODO.md"
+          },
+          {
+            "tag": "fileFilter",
+            "data": "00 Start.md"
+          },
+          {
+            "tag": "pathFilter",
+            "data": "01 Projects"
+          }
+        ],
+        "filterPolarity": "Allow",
+        "filterScope": "Both",
+        "name": "Home",
+        "showColumnTags": true,
+        "showFilteredTags": true
+      }
+    ],
+    "globalSettings": {
+      "defaultColumnNames": {
+        "today": "",
+        "tomorrow": "",
+        "future": "",
+        "undated": "",
+        "otherTags": "",
+        "untagged": "",
+        "completed": ""
+      },
+      "filters": [
+        {
+          "tag": "pathFilter",
+          "data": "01 Projects/_Archive"
+        },
+        {
+          "tag": "pathFilter",
+          "data": "04 Archive"
+        }
+      ],
+      "firstDayOfWeek": "FromLocale",
+      "ignoreFileNameDates": false,
+      "taskCompletionFormat": "ObsidianTasks",
+      "taskCompletionInLocalTime": true,
+      "taskCompletionShowUtcOffset": true
+    }
+  }
+}

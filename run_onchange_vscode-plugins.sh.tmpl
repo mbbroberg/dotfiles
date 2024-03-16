@@ -1,0 +1,10 @@
+#!/bin/zsh 
+
+# Look at the metadata file for VS Code on macOS
+{{ include "~/.vscode/extensions/extensions.json" | sha256sum }}
+# If change: append, find unique, install (and leave the files for reference)
+code --list-extensions > ~/.vscode/extensions-local
+cat ~/.vscode/extensions-local >> ~/.vscode/extensions-merge
+# Note: calling `uniq` directly doesn't catch duplicates
+sort -u ~/.vscode/extensions-merge > ~/.vscode/extensions-list
+cat ~/.vscode/extensions-list | xargs -n1 code --install-extension
