@@ -1,0 +1,44 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "backlink",
+      "properties"
+    ],
+    "leftRibbon": [
+      "Open quick switcher",
+      "Open graph view",
+      "Open command palette",
+      "Open format converter",
+      "Janitor: scan vault",
+      "Omnivore",
+      "Templater",
+      "File Tree Alternative Plugin",
+      "CardBoard",
+      "Insert template",
+      "Open Importer"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

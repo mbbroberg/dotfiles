@@ -7,7 +7,7 @@
           {
             "tag": "undated",
             "data": {
-              "collapsed": true,
+              "collapsed": false,
               "name": "Undated"
             }
           },
@@ -39,7 +39,7 @@
           {
             "tag": "dated",
             "data": {
-              "collapsed": true,
+              "collapsed": false,
               "name": "Future",
               "range": {
                 "tag": "after",
