@@ -2,6 +2,8 @@ import os
 
 source_dir = os.path.expanduser("/Users/mbbroberg/Local/PARA Vault/.obsidian/plugins/")
 home_dir = os.path.expanduser("~/obsidian/")
+ignore_list = ("update-time-on-edit")
+
 
 def check_hard_link(src_path, dest_path):
     try:
@@ -12,8 +14,10 @@ def check_hard_link(src_path, dest_path):
         print(f"Error checking hard link: {e}")
         return False
 
-def create_hard_links(directory):
+def create_hard_links(directory, ignore_list):
     for root, dirs, files in os.walk(directory):
+        # Skip directories in ignore_list
+        dirs[:] = [d for d in dirs if d not in ignore_list]
         for file in files:
             if file == "data.json":
                 # print(f"Found data.json in {root}")
