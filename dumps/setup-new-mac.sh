@@ -218,7 +218,8 @@ sudo pmset -a standbydelay 86400
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 # Save screenshots to the downlaods.
-defaults write com.apple.screencapture location "$HOME/Downloads/"
+### Updated for iCloud storage ###
+defaults write com.apple.screencapture location "~/Library/Mobile Documents/com~apple~CloudDocs/Downloads"
 
 #"Setting screenshot format to PNG"
 defaults write com.apple.screencapture type -string "png"
