@@ -1,99 +1,50 @@
 ---
-Last Edited: 2024-02-02 13:59:51
+edited: 2024-04-21 13:18:37
+created: 2024-01-27 14:44:55
+updated: 2024-06-02
 ---
+*Main documentation at [Dataview](https://blacksmithgu.github.io/obsidian-dataview/)*. Amazing resource [Dataview Obsidian Tutorials](https://obsidianttrpgtutorials.com/Obsidian+TTRPG+Tutorials/Plugin+Tutorials/Dataview/Dataview).
 
-### Tasks 
-https://publish.obsidian.md/tasks/Queries/Filters
 
-NOT tasks 
-```tasks
-not done 
-due after 2021-04-04
-NOT (path includes Daily) AND NOT (tags include #todo)
+## Automatic MOCs
+
+````
+list from [[]] and !outgoing([[]])
+````
+*This will create a list of all files that link to the current file but _do not_ already have a link in the file. This is a great way to avoid losing files*
+- [Source](https://obsidian.rocks/dataview-in-obsidian-a-beginners-guide/)
+
+## "Ago" times 
+
 ```
-
-
-## Setting up a table for Projects
-
-```dataview
-TABLE status as "Status", priority as Priority, durationformat(date(now) - file.mtime, "h'h' m'm'") + " ago" AS "Updated"
-FROM "Projects" OR "Topics"
-WHERE !contains(file.tags, "cancelled") AND !contains(file.tags, "done")
+durationformat(date(now) - file.mtime, "h'h' m'm'") + " ago" AS "Updated"`
 ```
+So cool: [[Dataview relative dates or times]]
 
-
+Reminder: `mtime` is modified time while `ctime` is create.
 
 ## New Files
 
-```dataview
+```
 TABLE file.ctime AS "Created"
 WHERE file.ctime >= date(today) - dur(1 week)
-LIMIT 10
+LIMIT 20
 ```
 
-## Tasks are neat
+## Contains relative link in fontmatter
 
-{{query.file.folder}} or {{query.file.path}} or others >> 
-Great info in https://github.com/obsidian-tasks-group/obsidian-tasks/blob/1c8e7a808a1fc80a72a80519c8eef1647fd40e05/docs/Scripting/Placeholders.md#L135
+Used this for my [[+Resource Template]]
 
-### Tasks and reformat the group by 
-
-group by function task.due.format("YYYY[%%]-MM[%%] MMM", "no due date")
-
-### Tasks in other files due today
-```tasks
-path does not include {{query.file.path}}
-due today
-sort by function task.file.path
-limit 5
-```
-#### Backlog
-```tasks 
-not done
-sort by due date
-limit 3
-```
-
-## Gather bullet points by tag! So cool 
-
-### Remove file titles!
-*LIST without id *
-```dataview
-LIST without id bullets.text
-FROM #me
-FLATTEN file.lists as bullets
-WHERE contains(bullets.tags, "#me/lesson") OR contains(bullets.tags, "#me/principle")
-SORT bullets.tags DESC
-```
-
-### The main thing
-*from John Engelman*
-
-```dataview
-LIST bullets.text
-FROM #tag
-FLATTEN file.lists as bullets
-WHERE contains(bullets.tags, "#tag")
-```
-Example: 
-
-```dataview
-LIST bullets.text
-FROM #cnc
-FLATTEN file.lists as bullets
-WHERE contains(bullets.tags, "#cnc")
-```
-
-## Area Template 
 #### TODOs
-```dataview
+```
 TASK
 WHERE contains(Research, link(this.file.name))
 limit 10
 ```
 
+
 ### Research
-```dataview
+```
 LIST
 FROM "Notes & Ideas" OR "Resources-Research"
 WHERE contains(Research, link(this.file.name))
@@ -103,8 +54,61 @@ limit 100
 
 
 
-### Resources 
-https://s-blu.github.io/basic-dataview-query-builder/
-https://obsidian.rocks/obsidian-search-five-hidden-features/
-https://blacksmithgu.github.io/obsidian-dataview/
-https://s-blu.github.io/obsidian_dataview_example_vault/
+## Tasks
+
+### Progress bar for tasks in a file 
+
+`$= "![progress](https://progress-bar.dev/" + Math.round(((dv.current().file.tasks.where(t => t.completed).length) / (dv.current().file.tasks).length || 0) * 100) + "/)"`
+
+### Tasks are super easy to filter  
+
+```
+due this week
+```
+
+### Tag-based Tasks via Dataview
+``` 
+TABLE WITHOUT ID visual, T.text, T.tags, length(T.tags) 
+FLATTEN file.tasks as T 
+FLATTEN file.link + " " + T.text as visual
+WHERE contains(list(" "), T.status) 
+SORT T.tag desc, T.file.name
+DESC GROUP BY T.tag
+```
+
+``` 
+TABLE WITHOUT ID visual, T.text, T.tags, length(T.tags) 
+FLATTEN file.tasks as T 
+FLATTEN file.link + " " + T.text as visual 
+WHERE contains(list(" "), T.status) AND T.tags WHERE file.folder = this.file.folder 
+SORT T.tag desc, T.file.name DESC 
+GROUP BY T.tag
+```
+
+From [here](https://forum.obsidian.md/t/in-dataview-how-can-i-make-the-tasks-in-a-task-query-have-links-to-their-respective-pages-right-next-to-them/59618/8)
+
+
+## More Ideas 
+
+- https://s-blu.github.io/basic-dataview-query-builder/
+- https://obsidian.rocks/obsidian-search-five-hidden-features/
+- https://blacksmithgu.github.io/obsidian-dataview/
+- https://s-blu.github.io/obsidian_dataview_example_vault/
+
+
+---
+up: []
+related: []
+created: 2024-06-02
+tags:
+---
+
+
+
+### Recently written 
+```dataview
+List
+WHERE (file.mtime >= date(today) - dur(3 week)) AND !contains(file.name, "0") AND !contains(file.folder, "0")
+SORT file.mtime desc
+LIMIT 5
+```
