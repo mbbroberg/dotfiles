@@ -1,0 +1,97 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "workspace:toggle-stacked-tabs",
+      "icon": "lucide-layers",
+      "name": "Toggle stacked tabs",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "workspace:toggle-stacked-tabs",
+      "icon": "lucide-layers",
+      "name": "Toggle stacked tabs",
+      "mode": "desktop",
+      "color": "#000000"
+    },
+    {
+      "id": "tag-pane:open",
+      "icon": "lucide-tag",
+      "name": "Tags view: Show tags",
+      "mode": "desktop",
+      "color": "#000000"
+    },
+    {
+      "id": "properties:open",
+      "icon": "lucide-archive",
+      "name": "Properties view: Show all properties",
+      "mode": "any",
+      "color": "#000000"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [
+      "janitor"
+    ],
+    "leftRibbon": [
+      "Obsidian42 - Text Transporter",
+      "File Info Panel",
+      "Omnisearch",
+      "Show a random prompt",
+      "Open Symbols for the active editor",
+      "Show Slide Preview",
+      "Open Markdown Table Editor",
+      "Open LexTest",
+      "Open ChatGPT--",
+      "Publish changes",
+      "Dangerzone Writing",
+      "Toggle Privacy Glasses",
+      "Hide all",
+      "Reveal non-private",
+      "Reveal all",
+      "New Excalidraw drawing",
+      "3D Graph",
+      "Publish changes...",
+      "Create new drawing",
+      "Find Journey",
+      "Create new canvas",
+      "Open projects",
+      "Open in Headings Mode",
+      "BRAT",
+      "Omnivore",
+      "Templater",
+      "Insert template",
+      "Open command palette",
+      "Open quick switcher",
+      "Manage workspace layouts",
+      "Open graph view",
+      "Toggle stacked tabs",
+      "Create new book note",
+      "Sync your Kindle highlights",
+      "Properties view: Show all properties",
+      "Tags view: Show tags"
+    ]
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

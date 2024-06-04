@@ -1,0 +1,11 @@
+{
+  "amazonRegion": "global",
+  "highlightsFolder": "References/Books",
+  "lastSyncMode": "amazon",
+  "isLoggedIn": true,
+  "syncOnBoot": false,
+  "downloadBookMetadata": false,
+  "lastSyncDate": "2024-05-31T21:16:17.699Z",
+  "fileNameTemplate": "{{authorsLastNames}} - {{title}}",
+  "fileTemplate": "---\nup: \"[[My Bookshelf]]\"\nrelated: \ntags: \nsubtitle: \"{{subtitle}}\"\nauthor: [[\"{{author}}\"]]\ntemplate_version: 1\ncategory: \"{{category}}\"\ntotal_page: \"{{totalpage}}\"\ncover_url: \"{{ImageUrl}}\"\npublish_date: \"{{publishDate}}\"\nread_date: \nfavorite: false\n---\nLast annotated {{lastAnnotatedDate}}\n\n![[{{ImageUrl}}|150]]\n\n## Highlights\n{{highlights}}\n"
+}

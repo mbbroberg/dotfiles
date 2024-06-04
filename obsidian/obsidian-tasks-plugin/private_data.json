@@ -5,12 +5,12 @@
   "taskFormat": "tasksPluginEmoji",
   "setCreatedDate": false,
   "setDoneDate": true,
-  "setCancelledDate": true,
+  "setCancelledDate": false,
   "autoSuggestInEditor": true,
-  "autoSuggestMinMatch": 0,
-  "autoSuggestMaxItems": 6,
+  "autoSuggestMinMatch": 1,
+  "autoSuggestMaxItems": 3,
   "provideAccessKeys": true,
-  "useFilenameAsScheduledDate": false,
+  "useFilenameAsScheduledDate": true,
   "filenameAsDateFolders": [],
   "recurrenceOnNextLine": false,
   "statusSettings": {
@@ -53,11 +53,12 @@
   "generalSettings": {},
   "headingOpened": {
     "Core Statuses": true,
-    "Custom Statuses": false
+    "Custom Statuses": true
   },
   "debugSettings": {
     "ignoreSortInstructions": false,
-    "showTaskHiddenData": false
+    "showTaskHiddenData": false,
+    "recordTimings": false
   },
   "loggingOptions": {
     "minLevels": {

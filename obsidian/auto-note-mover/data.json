@@ -1,0 +1,37 @@
+{
+  "trigger_auto_manual": "Automatic",
+  "use_regex_to_check_for_tags": false,
+  "statusBar_trigger_indicator": true,
+  "folder_tag_pattern": [
+    {
+      "folder": "Atlas/Maps",
+      "tag": "",
+      "pattern": ".*MOC"
+    },
+    {
+      "folder": "References/Quotes",
+      "tag": "",
+      "pattern": "^\".*"
+    },
+    {
+      "folder": "Calendar",
+      "tag": "",
+      "pattern": "^\\b\\d{4}-\\d{2}-\\d{2}\\b"
+    }
+  ],
+  "use_regex_to_check_for_excluded_folder": false,
+  "excluded_folder": [
+    {
+      "folder": "Atlas/Maps"
+    },
+    {
+      "folder": "Atlas/Maps/Micro"
+    },
+    {
+      "folder": "Calendar/Past Years"
+    },
+    {
+      "folder": "References/Grafts"
+    }
+  ]
+}

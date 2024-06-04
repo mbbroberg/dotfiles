@@ -10,16 +10,16 @@
           "id": "4ac0bfb2-7778-412f-94c0-1645dcba45fa",
           "name": "📓 Moment",
           "type": "Template",
-          "command": false,
-          "templatePath": "03 Resources/Templates/+New Moment.md",
+          "command": true,
+          "templatePath": "Efforts/Utilities/Templates/+New Moment Template.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{DATE:gggg MMM}} - {{Value}}"
+            "format": "{{DATE}} {{Value}}"
           },
           "folder": {
             "enabled": true,
             "folders": [
-              "Moments"
+              "Calendar"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -33,7 +33,7 @@
           },
           "openFile": true,
           "openFileInMode": "default",
-          "fileExistsMode": "Increment the file name",
+          "fileExistsMode": "Append to the bottom of the file",
           "setFileExistsBehavior": true
         },
         {
@@ -41,15 +41,15 @@
           "name": "🐞 Ada Log",
           "type": "Template",
           "command": true,
-          "templatePath": "03 Resources/Templates/+Ada Log.md",
+          "templatePath": "Efforts/Utilities/Templates/+Ada Log Template.md",
           "fileNameFormat": {
             "enabled": true,
-            "format": "{{DATE:gggg MMM}} - {{Value}}"
+            "format": "{{DATE:gggg MMM DD}} - {{Value}}"
           },
           "folder": {
             "enabled": true,
             "folders": [
-              "Moments"
+              "References/Moments"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -106,7 +106,7 @@
           "name": "🗒️ Quick Note",
           "type": "Template",
           "command": true,
-          "templatePath": "03 Resources/Templates/+New Note.md",
+          "templatePath": "03 Resources/Templates/+New Moment Template.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{VALUE}}"
@@ -114,7 +114,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "03 Resources/Notes"
+              "+"
             ],
             "chooseWhenCreatingNote": false,
             "createInSameFolderAsActiveFile": false,
@@ -128,18 +128,25 @@
           },
           "openFile": true,
           "openFileInMode": "default",
-          "fileExistsMode": "Increment the file name",
+          "fileExistsMode": "Append to the bottom of the file",
           "setFileExistsBehavior": true
+        },
+        {
+          "id": "eba3cf5b-07d6-4e81-9519-eaea49bb85fe",
+          "name": "🔎 Search",
+          "type": "Macro",
+          "command": false,
+          "macroId": "28aa5e3a-dee2-4cc9-807e-0a90b989a1cb"
         },
         {
           "id": "718eaa03-3751-4048-953a-8047ba35cb02",
           "name": "🏡 HOME",
           "type": "Template",
           "command": true,
-          "templatePath": "03 Resources/Templates/+New Note.md",
+          "templatePath": "",
           "fileNameFormat": {
             "enabled": true,
-            "format": "00 HOME"
+            "format": "Home "
           },
           "folder": {
             "enabled": false,
@@ -163,11 +170,11 @@
       "collapsed": false
     },
     {
-      "id": "8c98fceb-065c-4ef6-84b2-2d35a55b6056",
-      "name": "<Broken> Ada Logging",
+      "id": "b90ebe58-4db0-4f6b-8a84-cd1d0c5b612d",
+      "name": "Relative Path to File",
       "type": "Macro",
-      "command": false,
-      "macroId": "bb0f3297-5e5f-4e31-8957-7f2133f8ced1"
+      "command": true,
+      "macroId": "87de35b2-f485-4197-b9b2-122862e3155d"
     }
   ],
   "macros": [
@@ -182,100 +189,56 @@
           "commandId": "quickadd:choice:98d11414-b4de-4023-adde-b24da79213bc"
         }
       ],
-      "runOnStartup": true
+      "runOnStartup": false
     },
     {
-      "name": "Ada Logging",
-      "id": "bb0f3297-5e5f-4e31-8957-7f2133f8ced1",
+      "name": "🔎 Search",
+      "id": "28aa5e3a-dee2-4cc9-807e-0a90b989a1cb",
       "commands": [
         {
-          "name": "Create File",
-          "type": "NestedChoice",
-          "id": "df0e48a0-5075-4382-97ae-71d475e08370",
-          "choice": {
-            "id": "3b9785fe-edb1-4eba-93cf-32c044c2a6fe",
-            "name": "Create File",
-            "type": "Template",
-            "command": false,
-            "templatePath": "03 Resources/Templates/+Ada Log.md",
-            "fileNameFormat": {
-              "enabled": true,
-              "format": "{{DATE:gggg MMM}} - {{Value:The Moment}}"
-            },
-            "folder": {
-              "enabled": true,
-              "folders": [
-                "Moments"
-              ],
-              "chooseWhenCreatingNote": false,
-              "createInSameFolderAsActiveFile": false,
-              "chooseFromSubfolders": false
-            },
-            "appendLink": false,
-            "openFileInNewTab": {
-              "enabled": false,
-              "direction": "vertical",
-              "focus": true
-            },
-            "openFile": true,
-            "openFileInMode": "default",
-            "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": true
-          }
-        },
-        {
-          "name": "Wait",
-          "type": "Wait",
-          "id": "33b9ba14-ead2-4642-84a6-2c53559de22e",
-          "time": 100
-        },
-        {
-          "name": "Start Note",
-          "type": "NestedChoice",
-          "id": "21c3d577-2590-4035-9af3-0da82d125482",
-          "choice": {
-            "id": "49fd7c7a-d9e5-4452-a847-61299def73e0",
-            "name": "Start Note",
-            "type": "Capture",
-            "command": false,
-            "appendLink": false,
-            "captureTo": "",
-            "captureToActiveFile": true,
-            "createFileIfItDoesntExist": {
-              "enabled": false,
-              "createWithTemplate": false,
-              "template": ""
-            },
-            "format": {
-              "enabled": true,
-              "format": "It's {{DATE:ddd MMM D hh:mm}} and I'm feeling Type:{{VALUE:Celebration,Disappointment}}(specifically Mood:{{VALUE:In Awe,Proud,Excited,Calm,Joyful,Focused,Exhausted,Depleted,Easily Upset,Sad,Anxious}}. Here's the story I'm telling myself: \n\n"
-            },
-            "insertAfter": {
-              "enabled": false,
-              "after": "",
-              "insertAtEnd": false,
-              "considerSubsections": false,
-              "createIfNotFound": false,
-              "createIfNotFoundLocation": "top"
-            },
-            "prepend": true,
-            "task": false,
-            "openFileInNewTab": {
-              "enabled": false,
-              "direction": "vertical",
-              "focus": true
-            },
-            "openFile": false,
-            "openFileInMode": "default"
-          }
+          "name": "Quick Switcher++: Open in Standard Mode",
+          "type": "Obsidian",
+          "id": "6769e83c-9f0d-4b62-9533-2a25e5ff9465",
+          "commandId": "darlal-switcher-plus:switcher-plus:open"
         }
       ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Relative Path to File",
+      "id": "87de35b2-f485-4197-b9b2-122862e3155d",
+      "commands": [
+        {
+          "name": "Templater: Insert Efforts/Utilities/Templates/xRelative Path.md",
+          "type": "Obsidian",
+          "id": "ab62b3e6-82d5-4f61-abf4-fed1d4775126",
+          "commandId": "templater-obsidian:Efforts/Utilities/Templates/xRelative Path.md"
+        },
+        {
+          "name": "Select link on active line",
+          "type": "EditorCommand",
+          "id": "3bd8529a-94ed-4390-be01-f260f32f7fe4",
+          "editorCommandType": "Select link on active line"
+        },
+        {
+          "name": "Cut",
+          "type": "EditorCommand",
+          "id": "a7ee83ad-9dea-41da-801d-a7212f421bcd",
+          "editorCommandType": "Cut"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Log",
+      "id": "5445be45-2109-4653-a2d6-ca1f2afb0057",
+      "commands": [],
       "runOnStartup": false
     }
   ],
   "inputPrompt": "single-line",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPath": "Efforts/Utilities/Templates",
   "announceUpdates": true,
   "version": "1.8.1",
   "disableOnlineFeatures": true,

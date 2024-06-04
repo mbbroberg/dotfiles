@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "03 Resources/Templates",
+  "templates_folder": "Efforts/Utilities/Templates",
   "templates_pairs": [
     [
       "",
@@ -15,26 +15,28 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
-      "folder": "03 Resources/Topics",
-      "template": "03 Resources/Templates/Resource Template+.md"
+      "folder": "Efforts/On",
+      "template": "Efforts/Utilities/Templates/Template, Properties, Effort (Kit).md"
     },
     {
-      "folder": "02 Areas/Months",
-      "template": "03 Resources/Templates/+New Month Template.md"
+      "folder": "Efforts/Ongoing",
+      "template": "Efforts/Utilities/Templates/Template, Properties, Effort (Kit).md"
     },
     {
-      "folder": "02 Areas/Years",
-      "template": "03 Resources/Templates/+New Year Template.md"
+      "folder": "Efforts/Simmering",
+      "template": "Efforts/Utilities/Templates/Template, Properties, Effort (Kit).md"
     },
     {
-      "folder": "",
-      "template": ""
+      "folder": "Efforts/Sleeping",
+      "template": "Efforts/Utilities/Templates/Template, Properties, Effort (Kit).md"
     }
   ],
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "03 Resources/Templates/+Ada Log.md"
+    "Efforts/Utilities/Templates/Template, Properties, Base.md",
+    "Efforts/Utilities/Templates/+Callout Template.md",
+    "Efforts/Utilities/Templates/xRelative Path.md"
   ],
   "startup_templates": [
     ""
